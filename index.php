@@ -50,7 +50,9 @@
             $telefone = htmlspecialchars($telefone, ENT_QUOTES, "UTF-8"); 
             
                 if (!empty($nome) || !empty($email) || !empty($telefone)) {
-                    $mensagem = "Cadastro realizado com sucesso! Nome: " . $nome . "; Email: ". $email. "; Telefone: ". $telefone;
+                    $mensagem = "Cadastro realizado com sucesso! Nome: " . $nome . "; 
+                    $mensagem = Email: ". $email. "; 
+                    $mensagem = Telefone: ". $telefone;
                 } 
                 
                 else { $mensagem = "Preencha pelo menos um dos campos."; } } 
