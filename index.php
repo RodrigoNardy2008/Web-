@@ -55,7 +55,17 @@
                     Telefone: ". $telefone;
                 } 
                 
-                else { $mensagem = "Preencha pelo menos um dos campos."; } } 
+                else { $mensagem = "Preencha pelo menos um dos campos."; }
+        
+            $databaseUrl = getenv("DATABASE_URL");
+            $conexao = pg_connect($databaseUrl);
+
+            pg_query_params(
+                $conexao,
+                "INSERT INTO ususarios (email) VALUES ($1)",
+                array($email)
+            );
+        } 
 
                 echo $mensagem;
             ?>
