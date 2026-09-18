@@ -28,6 +28,30 @@
             </div>
 
         </form>
+
+        <?php 
+        $mensagem = ""; 
+        $nome = ""; 
+        $email = ""; 
+        $telefone = ""; 
+        
+        if ($_SERVER["REQUEST_METHOD"] === "POST") { 
+
+            $nome = $_POST["username"] ?? ""; 
+
+            $email = $_POST["email"] ?? ""; 
+
+            $telefone = $_POST["telefone"] ?? ""; 
+            
+            $nome = htmlspecialchars($nome, ENT_QUOTES, "UTF-8"); 
+            
+            $email = htmlspecialchars($email, ENT_QUOTES, "UTF-8"); 
+            
+            $telefone = htmlspecialchars($telefone, ENT_QUOTES, "UTF-8"); 
+            
+                if (!empty($nome) || !empty($email) || !empty($telefone)) { $mensagem = "Cadastro realizado com sucesso!"; } 
+                
+                else { $mensagem = "Preencha pelo menos um dos campos."; } } ?>
     </div>
 
 </body>
