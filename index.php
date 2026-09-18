@@ -10,7 +10,7 @@
 <body>
 
     <div id="form">
-        <form action="">
+        <form action="POST">
 
             <h2 class="title">Cadastrar</h2>
 
