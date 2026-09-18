@@ -51,8 +51,8 @@
             
                 if (!empty($nome) || !empty($email) || !empty($telefone)) {
                     $mensagem = "Cadastro realizado com sucesso! Nome: " . $nome . "; 
-                    $mensagem = Email: ". $email. "; 
-                    $mensagem = Telefone: ". $telefone;
+                    Email: ". $email. "; 
+                    Telefone: ". $telefone;
                 } 
                 
                 else { $mensagem = "Preencha pelo menos um dos campos."; } } 
